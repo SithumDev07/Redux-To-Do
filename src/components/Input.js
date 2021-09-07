@@ -10,13 +10,14 @@ function Input() {
     const dispatch = useDispatch();
 
     const addTodo = () => {
-      console.log(`Adding ${input}`);
 
       dispatch(saveTodo({
             item: input,
             done: false,
             id: Date.now()
       }))
+
+      setInput('');
     }
     
     return (
